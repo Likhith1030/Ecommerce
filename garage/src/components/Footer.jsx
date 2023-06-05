@@ -38,7 +38,8 @@ export default function StickyFooter() {
             py: 3,
             px: 2,
             mt: "auto",
-            background: "linear-gradient(to right, black, red)",
+            background:
+              "linear-gradient(to right, rgba(0, 0, 0), rgba(101, 0, 0, 0.9))",
           }}
         >
           <Container maxWidth="sm" color="white">
