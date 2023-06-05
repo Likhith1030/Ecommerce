@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import ceo from "../imgs/ceo.jpeg";
+import { Link } from "react-router-dom";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -63,7 +64,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            SANMAX MERCADO
+            SANMAX
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -127,6 +128,8 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                component={Link}
+                to={`/${page.toLowerCase()}`}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
