@@ -41,8 +41,10 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        background: "linear-gradient(to right, black, red)",
+        background:
+          "linear-gradient(to right, rgba(0, 0, 0), rgba(101, 0, 0, 0.9))",
       }}
+      className="navbar"
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
