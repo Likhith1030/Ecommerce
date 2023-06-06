@@ -1,2 +1,2 @@
-# sanmax mercado
+# Sanmax Mercado
 research and development internship
