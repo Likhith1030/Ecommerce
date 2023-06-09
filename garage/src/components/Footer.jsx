@@ -10,7 +10,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="white">
       {"Copyright © "}
-      <Link color="inherit" href="https://sanmax.vercel.app/">
+      <Link color="inherit" href="/">
         Sanmax Mercdo
       </Link>{" "}
       {new Date().getFullYear()}
