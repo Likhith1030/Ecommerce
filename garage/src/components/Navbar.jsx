@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 component={Link}
-                to={`/${page.toLowerCase()}`}
+                to={"/blog"}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
