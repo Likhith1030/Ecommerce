@@ -20,6 +20,7 @@ const Articles = () => {
   // Handle page change
   const handlePageChange = (event, pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
