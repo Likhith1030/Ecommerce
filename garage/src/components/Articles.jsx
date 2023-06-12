@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Pagination, Paper } from "@mui/material";
+import { Pagination, Paper, Button } from "@mui/material";
 import articleData from "../imgs/blogs.json";
 import Navbar from "../components/Navbar";
+import { Launch } from "@mui/icons-material";
 import "../App.css";
 
 const Articles = () => {
@@ -39,7 +40,14 @@ const Articles = () => {
           >
             <h2>{title}</h2>
             <p>{article[0][0]}</p>
-            <a href={article[0][1]}>Read More</a>
+            <Button
+              variant="contained"
+              color="primary"
+              href={article[0][1]}
+              endIcon={<Launch />}
+            >
+              Read More
+            </Button>
           </Paper>
         ))}
 
