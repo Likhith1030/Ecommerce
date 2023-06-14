@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import ceo from "../imgs/ceo.jpeg";
 import { Link } from "react-router-dom";
+
 const pages = ["Products", "Pricing", "Blogs"];
 const settings = ["SignIn", "SignUp"];
 
@@ -24,6 +25,7 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -53,8 +55,8 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -110,8 +112,8 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component={Link}
+            to="/blogs" // Replace with the correct path for the Blogs page
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -179,4 +181,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;
