@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Pagination, Card, CardContent, Button, Grid } from "@mui/material";
+import {
+  Pagination,
+  Card,
+  CardContent,
+  Button,
+  Grid,
+  Container,
+} from "@mui/material";
 import articleData from "../imgs/blogs.json";
 import Navbar from "../components/Navbar";
 import { Launch } from "@mui/icons-material";
@@ -26,16 +33,17 @@ const Articles = () => {
   return (
     <>
       <Navbar />
-      <div
-        style={{ display: "flex", justifyContent: "center", padding: "20px" }}
-      >
-        <h1>Sanmax Blogs</h1>
-      </div>
-      <div className="blogs" style={{ padding: "10px" }}>
-        <Grid container spacing={2}>
+      <Container maxWidth="xl" className="articles-container">
+        <div
+          className="articles-heading"
+          style={{ display: "flex", justifyContent: "center", padding: "20px" }}
+        >
+          <h1>Sanmax Blogs</h1>
+        </div>
+        <Grid container spacing={2} justifyContent="center">
           {currentArticles.map(([title, article], index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <div style={{ width: "500px", height: "350px" }}>
+              <div className="card-container">
                 <Card
                   sx={{
                     height: "100%",
@@ -64,7 +72,7 @@ const Articles = () => {
         </Grid>
 
         {/* Pagination */}
-        <div>
+        <div className="pagination-container">
           {Object.entries(articleData).length > articlesPerPage && (
             <Pagination
               count={Math.ceil(
@@ -82,7 +90,7 @@ const Articles = () => {
             />
           )}
         </div>
-      </div>
+      </Container>
     </>
   );
 };
