@@ -14,8 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import ceo from "../imgs/ceo.jpeg";
 import { Link } from "react-router-dom";
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Logout"];
+const pages = ["Products", "Pricing", "Blogs"];
+const settings = ["SignIn", "SignUp"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 component={Link}
-                to={"/blog"}
+                to={`/${page.toLowerCase()}`}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
@@ -163,7 +163,11 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" component={Link} to={"/blog"}>
+                  <Typography
+                    textAlign="center"
+                    component={Link}
+                    to={`/${setting.toLowerCase()}`}
+                  >
                     {setting}
                   </Typography>
                 </MenuItem>
